@@ -103,6 +103,6 @@ for card in db.get_all_cards():
 print("\n=== delete_card ===")
 
 db.delete_card("999_002")
-
+db.delete_card("999_001")
 for card in db.get_all_cards():
     print(card)
