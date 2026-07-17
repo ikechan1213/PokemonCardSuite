@@ -1,24 +1,13 @@
 [
     {
-        "card_number": "001/081",
-        "packid": "M5",
-        "name": "トロピウス",
+        "card_number": "999_001",
+        "packid": "TEST",
+        "name": "ピカチュウEX",
         "evolution": "たね",
-        "hp": 110,
-        "type": "草",
-        "rarity": "C",
-        "pack": "アビスアイ",
-        "count": 1
-    },
-    {
-        "card_number": "002/081",
-        "packid": "M5",
-        "name": "アゴジムシ",
-        "evolution": "たね",
-        "hp": 70,
-        "type": "草",
-        "rarity": "C",
-        "pack": "アビスアイ",
-        "count": 1
+        "hp": 200,
+        "type": "雷",
+        "rarity": "RR",
+        "pack": "テストパック",
+        "count": 5
     }
 ]

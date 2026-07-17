@@ -1,10 +1,10 @@
-from .storage import load_cards, save_cards
-from .search import search_name, search_type, search_rarity, search_pack, search_card_number
-from PokemonCardLibrary.storage import Storage
+from .storage import Storage
+from .search import (search_name, search_type,search_rarity, search_pack, search_card_number)
+
 
 class Database:
-    def __init__(self):
-        self.storage = Storage()
+    def __init__(self, file_name="cards.json"):
+        self.storage = Storage(file_name)
         self.cards = self.storage.load_cards()
 
     def add_card(self, card):
@@ -13,7 +13,7 @@ class Database:
             if c.card_number == card.card_number:
                 raise ValueError("このカードは既に登録されています。")
         self.cards.append(card)
-        save_cards(self.cards)
+        self.storage.save_cards(self.cards)
 
     def update_card(self, card):
         # カード登録情報を更新する
@@ -23,7 +23,7 @@ class Database:
         else:
             raise ValueError("指定されたカードは見つかりません。")
         self.cards = [c if c.card_number != card.card_number else card for c in self.cards]
-        save_cards(self.cards)
+        self.storage.save_cards(self.cards)
 
     def delete_card(self, card_number):
         # カード登録情報を削除する
@@ -35,7 +35,7 @@ class Database:
                 raise ValueError("指定されたカードが見つかりません。")
         
         self.cards = [card for card in self.cards if card.card_number != card_number]
-        save_cards(self.cards)
+        self.storage.save_cards(self.cards)
         return
 
     def get_all_cards(self):

@@ -1,0 +1,24 @@
+[
+    {
+        "card_number": "003_081",
+        "packid": "M5",
+        "name": "カリキリ",
+        "evolution": 1,
+        "hp": "たね",
+        "type": 70,
+        "rarity": "草",
+        "pack": "C",
+        "count": "アビスアイ"
+    },
+    {
+        "card_number": "004_081",
+        "packid": "M5",
+        "name": "ラランテス",
+        "evolution": 1,
+        "hp": "1進化",
+        "type": 260,
+        "rarity": "草",
+        "pack": "RR",
+        "count": "アビスアイ"
+    }
+]

@@ -1,5 +1,5 @@
 class Card:
-    def __init__(self, card_number, packid, name, hp, type, rarity, pack, count, evolution):
+    def __init__(self, card_number, packid, name, evolution, hp, type, rarity, pack, count):
         self.card_number = card_number
         self.packid = packid
         self.name = name
