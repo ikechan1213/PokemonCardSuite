@@ -38,3 +38,9 @@ class Card:
             data["count"],
             data["evolution"]
         )
+    #　プリントデバッグ用にカード番号とカード名を表示する
+    def __str__(self):
+        return f"{self.card_number} {self.name}"
+    
+    def __repr__(self):
+        return f"Card({self.card_number}, {self.name})"
