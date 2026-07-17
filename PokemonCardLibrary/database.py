@@ -1,9 +1,11 @@
 from .storage import load_cards, save_cards
 from .search import search_name, search_type, search_rarity, search_pack, search_card_number
+from PokemonCardLibrary.storage import Storage
 
 class Database:
     def __init__(self):
-        self.cards = load_cards()
+        self.storage = Storage()
+        self.cards = self.storage.load_cards()
 
     def add_card(self, card):
         # カードをデータベースにカードを追加する
